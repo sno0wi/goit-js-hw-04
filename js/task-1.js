@@ -1,9 +1,19 @@
+// function isEnoughCapacity(products, containerSize) {
+//   let totalProduct = 0;
+//   const allProduct = Object.values(products);
+
+//   for (const product of allProduct) {
+//     totalProduct += product;
+//   }
+
+//   return containerSize <= totalProduct;
+// }
+
 function isEnoughCapacity(products, containerSize) {
   let totalProduct = 0;
-  const allProduct = Object.values(products);
 
-  for (const product of allProduct) {
-    totalProduct += product;
+  for (const product in products) {
+    totalProduct += products[product];
   }
 
   return containerSize <= totalProduct;
